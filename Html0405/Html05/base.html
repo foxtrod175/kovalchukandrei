@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table widht="700" >
+    <tr>
+        <td valign="top"><p><b>Простая форма поиска с вариантами:</b></p>
+            <form name="form1" method="POST" action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Строка поиска</legend>
+                    <input type="text" name="text" maxlength="10">
+                    <input type="submit" value="искать"><br>
+                    <label>
+                        <input type="radio" name="radio" value="sait"> на сайте
+                    </label>
+                    <label>
+                        <input type="radio" name="radio" value="google"> в google
+                    </label><br>
+                    <em>Длина запроса не более более 10 символов</em>
+                </fieldset>
+            </form>
+        </td>
+        <td valign="top"><p><b>Простая форма поиска с вариантами:</b></p>
+            <form name="form2" method="POST" action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Строка поиска</legend>
+                    <input type="text" name="text" required autofocus>*
+                    <input type="submit" value="искать"><br>
+                    <label>
+                        <input type="radio" name="radio" value="sait"> на сайте                   
+                        <input type="radio" name="radio" value="google"> в google
+                    </label><br>
+                    * - <em>обязательное поле</em>
+                </fieldset>
+            </form>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top"><p><b>Простая форма авторизации:</b></p>
+            <form name="form3" method="POST" action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Авторизуйтесь</legend>
+                    <label>
+                    <input type="text" name="log" required>
+                    * Логин<br>                    
+                    <input type="password" name="pas" required>
+                    * Пароль <br>                    
+                    <input type="checkbox" name="stay">
+                    Оставаться в системе
+                </label><br>
+                <input type="submit" value="Войти"><br>                  
+                * - <em>обязательное поле</em><br>
+                <em>Автофокус в поле поиска</em>
+                </fieldset>
+            </form>
+        </td>
+        <td valign="top"><p><b>Опрос(голосование):</b></p>
+            <form name="form4" method="POST" action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Как вам?</legend>
+                    <label>
+                    <input type="radio" name="radio" value="1">ничего<br>
+                    <input type="radio" name="radio" value="2">неплохо<br>
+                    <input type="radio" name="radio" value="3">хорошо<br>
+                    <input type="radio" name="radio" value="4">супер<br>
+                    <input type="hidden" name="date_voite" value="2013.12.31">
+                    <input type="submit" value="Отправить"><br>
+                    <em>Есть скрытое поле</em><br>
+                    <em>name=date_voite, value="2013.12.31"</em>
+                </label>
+                </fieldset>
+            </form></td>
+    </tr>
+    <tr>
+        <td valign="top"><p><b>Отзыв:</b></p>
+            <form name="form5" method="POST" action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Оставьте Ваш отзыв</legend>
+                    <label>
+                        <input type="text" name="log" required>
+                        * Имя<br>                    
+                        <input type="email" name="e-mail"method="POST" required>
+                        * e-mail               
+                     </label><br>
+                        <textarea name="text_area" lang="ru">Форма отправки</textarea><br>
+                    <input type="submit" value="Отправить"><br>
+                    * - <em>обязательно поле</em><br>
+                    <em>поле email - с проверкой</em><br>   
+                    <em>метод POST</em>
+                </fieldset>
+            </form></td>
+        <td valign="top"><p><b>Выпадающий и мульти списки:</b></p>
+            <form name="form6" method="POST" action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Города Рб</legend>
+                    <select name="list" id="list"> 
+                        <optgroup label="Города РБ">
+                            <option value="1">Брест</option>
+                            <option value="2">Минск</option>
+                            <option value="3">Витебск</option>
+                        </optgroup>
+                        <optgroup label="Города России">
+                            <option value="4">Москва</option>
+                            <option value="5">Рязань</option>
+                            <option value="6">Магадан</option>
+                        </optgroup>
+                    </select>
+                    <select name="list" size="8" multiple> 
+                        <optgroup label="Города РБ">
+                            <option value="1">Брест</option>
+                            <option value="2">Минск</option>
+                            <option value="3">Витебск</option>
+                        </optgroup>
+                        <optgroup label="Города России">
+                            <option value="4">Москва</option>
+                            <option value="5">Рязань</option>
+                            <option value="6">Магадан</option>
+                        </optgroup>
+                    </select>
+                    <input type="submit" value="Ок">
+                </fieldset>
+            </form></td>
+    </tr>
+    <tr>
+        <td valign="top"><p><b>Загрузка файлов на сервер:</b></p>
+            <form name="form7" action="http://fe.it-academy.by/TestForm.php" method="POST" enctype="multipart/form-data" >
+                <fieldset>
+                    <legend>Upload</legend>
+                    <label>
+                        Файл:<br>
+                        <input type="file" name="file"><br>
+                    </label>
+                    <label>
+                        Срок хранения (года):<br>
+                        <input type="number" name="ages" step="1" min="1">                                          
+                    </label>
+                     <input type="submit" value="загрузить"><br>
+                     <em>Метод POST</em><br>
+                     <em>в теге form используйте атрибут</em><br>  
+                     <em>enctype="multipart/form-data" для отправки</em><br>  
+                     <em>файла на сервер</em><br>                                           
+                </fieldset>                
+            </form></td>
+        <td valign="top"><p><b>Валидация данных HTML5:</b></p>
+            <form name="form8" method="POST" action="http://fe.it-academy.by/TestForm.php">
+                <fieldset>
+                    <legend>Строка поиска</legend>
+                    <label>
+                        <input type="text" name="poisk" placeholder="Только русские буквы" pattern="^[А-Яа-яЁё\s]+$"><br>                     
+                        <em>Телефонный номер в формате</em><br>
+                        +<em>XXX-XX-XXXXXXX, где X - любое число</em><br>
+                        <input type="text" placeholder="+XXX-XX-XXXXXXX" pattern="\+\d{3}-\d{2}-\d{7}" name="phone"><br>
+                        <input type="submit" value="Проверить">                        
+                    </label>                   
+                                      
+                </fieldset>
+            </form></td>
+    </tr>
+</table>
+    
+</body>
+</html>
