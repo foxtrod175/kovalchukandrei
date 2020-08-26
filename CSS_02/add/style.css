@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color:rgb(216, 221, 228);
+    }
+    
+.stat {
+    background-color: gray;
+    margin-bottom: .2em;
+}
+.navigation {
+      background-color: lightgrey;
+      flex-basis: 15em;
+      }
+footer{
+      background-color: darkgrey;
+      flex-grow: 1;
+}
+.a{ display :flex;
+display: inline-block;
+flex-grow: 1;}
+.h{
+padding-top: 20px;
+}
